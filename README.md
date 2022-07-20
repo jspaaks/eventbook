@@ -4,6 +4,7 @@ Basic CRUD'ing of the elements of an array via REST requests to a web server. De
 
 - Closures
 - Generics
+- Pointers
 - REST API with POST/GET/PUT/DELETE requests, see below
 
 ## Endpoints
