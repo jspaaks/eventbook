@@ -28,7 +28,7 @@ Update one event by its index. Events are layed out as defined in `src/types/typ
 
 Delete one event by its index.
 
-## Prequisites
+## Prerequisites
 
 - Go >= 1.18 (because of generics)
 
