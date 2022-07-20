@@ -23,10 +23,10 @@ func CreateNewRouter() *Router {
 }
 
 func (router *Router) AddRoutesAndHandlers() *Router {
-	router.HandleFunc("/api/events", handlers.CreateEvent(&events)).Methods("POST")
-	router.HandleFunc("/api/events", handlers.ReadEvents(&events)).Methods("GET")
-	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.ReadEvent(&events)).Methods("GET")
-	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.UpdateEvent(&events)).Methods("PUT")
-	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.DeleteEvent(&events)).Methods("DELETE")
+	router.HandleFunc("/api/events", handlers.CreateItem(&events)).Methods("POST")
+	router.HandleFunc("/api/events", handlers.ReadItems(&events)).Methods("GET")
+	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.ReadItem(&events)).Methods("GET")
+	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.UpdateItem(&events)).Methods("PUT")
+	router.HandleFunc("/api/event/{index:[0-9]+}", handlers.DeleteItem(&events)).Methods("DELETE")
 	return router
 }

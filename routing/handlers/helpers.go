@@ -7,12 +7,12 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func GetEventIndex(request *http.Request) int64 {
+func GetItemIndex(request *http.Request) int64 {
 	var indexString string = mux.Vars(request)["index"]
-	var iEvent, _ = strconv.ParseInt(indexString, 10, 0)
-	return iEvent
+	var iItem, _ = strconv.ParseInt(indexString, 10, 0)
+	return iItem
 }
 
-func GetNumberOfEvents(events *[]Event) int64 {
-	return int64(len(*events) - 1)
+func GetNumberOfItems[T any](items *[]T) int64 {
+	return int64(len(*items) - 1)
 }
